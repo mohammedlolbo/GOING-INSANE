@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard – Latte Test</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <canvas id="matrix"></canvas>
+    <div class="center-box">
+        <h2>Welcome, {{ user }}</h2>
+        <p><strong>Webmoney:</strong> {{ money }} €</p>
+        <p><strong>Subscription:</strong> {{ subscription if subscription else "None" }}</p>
+        <p class="note">💡 If you want to charge up money, send the amount to <b>tomaschafyy</b> on PayPal with your username and "family and friends" in the message. Wait 30–60 minutes for activation.</p>
+        <a href="/logout">Logout</a>
+    </div>
+</body>
+</html>
