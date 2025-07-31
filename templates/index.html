@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Latte Test – Send Meow</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="/static/js/matrix.js" defer></script>
+</head>
+<body>
+    <canvas id="matrix"></canvas>
+
+    <div class="center-box">
+        <h1>Latte Test – Send Meow</h1>
+        {% if allowed %}
+            <form method="POST" action="/run-test">
+                <input type="text" name="url" placeholder="Your Website URL" required>
+                <button type="submit">Run Latte Test</button>
+            </form>
+            <p class="note">You are only allowed to use this tool on websites you own. Illegal use is not allowed.</p>
+        {% else %}
+            <p style="color:#fff;">You need an active subscription to use the tool.</p>
+        {% endif %}
+    </div>
+</body>
+</html>
